@@ -5,10 +5,7 @@
 
 <nav class="w-full bg-white dark:bg-gray-900 shadow-md">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="text-2xl font-bold">
-      <a href="/">MyPortfolio</a>
-    </div>
-    <div class="space-x-6 text-lg">
+    <div class="space-x-6 text-lg text-black dark:text-white">
       <a href="/" class="hover:underline">Home</a>
       <a href="/about" class="hover:underline">About</a>
       <a href="/projects" class="hover:underline">Projects</a>
