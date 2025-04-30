@@ -1,14 +1,50 @@
 <!-- src/lib/components/HeroSection.svelte -->
-<section class="flex flex-col items-center justify-center text-center min-h-screen bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 px-6">
-  <h1 class="text-5xl font-extrabold leading-tight sm:text-6xl mb-6">
-    Hi, I'm <span class="text-blue-500">[Phinn Low]</span>
-  </h1>
+<script lang="ts">
+  import { fly, fade } from 'svelte/transition';
+
+  const title = "Hi, I'm [Phinn]";
+  let display = "";
+  let idx = 0;
+
+  // simple typewriter effect
+  const type = () => {
+    const interval = setInterval(() => {
+      display += title[idx++];
+      if (idx === title.length) clearInterval(interval);
+    }, 75);
+  };
   
-  <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
-    I'm a Computer Science student passionate about web development, AI, and building cool projects.
-  </p>
-  
-  <a href="/projects" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow transition">
-    View My Projects
-  </a>
+  // kick off typing when component mounts
+  $: if (idx === 0) type();
+</script>
+
+<section class="relative flex items-center justify-center h-screen overflow-hidden text-center">
+  <!-- animated gradient background -->
+  <div class="absolute inset-0 animate-gradient"></div>
+
+  <!-- content -->
+  <div class="relative z-10 px-6">
+    <h1
+      in:fly={{ y: -100, duration: 800 }}
+      class="text-6xl font-extrabold text-white mb-6 sm:text-7xl"
+    >
+      {display}
+    </h1>
+
+    <p
+      in:fade={{ delay: 600, duration: 800 }}
+      class="text-xl sm:text-2xl text-white mb-8 max-w-xl mx-auto"
+    >
+      I turn ideas into reality.
+    </p>
+
+    <a
+      in:fly={{ y: 100, duration: 800, delay: 1200 }}
+      href="/projects"
+      class="inline-block bg-white text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:scale-105 transform transition"
+    >
+      View Projects
+    </a>
+  </div>
 </section>
+

@@ -6,7 +6,7 @@
 </script>
 
 <article class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 hover:shadow-lg transition">
-  <h3 class="text-2xl font-semibold mb-2">{title}</h3>
+  <h3 class="text-2xl text-black dark:text-white font-semibold mb-2">{title}</h3>
   <p class="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
 
   {#if tags?.length}

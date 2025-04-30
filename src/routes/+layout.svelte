@@ -7,4 +7,6 @@
 
 <Navbar />
 
-{@render children()}
+<main class="bg-white dark:bg-gray-900 min-h-screen transition-colors">
+  {@render children()}
+</main>

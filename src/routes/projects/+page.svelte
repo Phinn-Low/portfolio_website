@@ -4,7 +4,7 @@
 </script>
 
 <section class="max-w-6xl mx-auto px-6 py-16">
-  <h2 class="text-4xl font-bold mb-8 text-center">
+  <h2 class="text-4xl font-bold text-black dark:text-white mb-8 text-center">
     My Projects
   </h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

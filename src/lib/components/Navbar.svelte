@@ -8,6 +8,7 @@
     <div class="space-x-6 text-lg text-black dark:text-white">
       <a href="/" class="hover:underline">Home</a>
       <a href="/about" class="hover:underline">About</a>
+      <a href="/courses" class="hover:underline">Courses</a>
       <a href="/projects" class="hover:underline">Projects</a>
       <a href="/contact" class="hover:underline">Contact</a>
     </div>
