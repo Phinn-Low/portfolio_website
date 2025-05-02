@@ -1,3 +1,3 @@
 <script lang="ts">
-  // maybe set something up here like email
+  // some logic for emails
 </script>
