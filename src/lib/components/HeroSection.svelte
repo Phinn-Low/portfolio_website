@@ -2,7 +2,7 @@
 <script lang="ts">
   import { fly, fade } from 'svelte/transition';
 
-  const title = "Hi, I'm [Phinn]";
+  const title = "Hi, I'm {Phinn}";
   let display = "";
   let idx = 0;
 
